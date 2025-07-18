@@ -1,0 +1,195 @@
+/* app.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base layout styles */
+:root {
+  --header-height: 4rem;
+  --container-padding: 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 4s ease-in-out;
+}
+
+/* Container modifications */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Responsive Grid System */
+.grid-system {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Header Adjustments */
+#home {
+  min-height: calc(100vh - var(--header-height));
+  padding: 2rem var(--container-padding);
+}
+
+@media (max-width: 1200px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #home .relative {
+    margin: 0 auto;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  .absolute.top-1\/2.right-8 {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
+/* Skills Section */
+#skills .grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  #skills .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Projects Section */
+.swiper-container {
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: calc(50% - 2rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-slide {
+    width: calc(100% - 2rem) !important;
+  }
+}
+
+/* Timeline Section */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 0 1rem;
+  }
+
+  .timeline-event {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+@media (max-width: 640px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+/* Footer Adjustments */
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Floating Menu */
+@media (max-width: 768px) {
+  .floating-menu {
+    bottom: 1rem;
+    right: 1rem;
+    top: auto;
+  }
+
+  .menu-items {
+    bottom: 100%;
+    right: 0;
+    top: auto;
+  }
+}
+
+/* Achievement Cards */
+@media (max-width: 1024px) {
+  .achievement-card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    width: 300px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-gray-900 {
+    background-color: #111827;
+  }
+
+  .dark\:text-white {
+    color: #ffffff;
+  }
+
+  .dark\:text-gray-300 {
+    color: #d1d5db;
+  }
+}
+
