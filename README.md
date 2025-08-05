@@ -1,4 +1,6 @@
-# Web Development Project
+# Web Development Project 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3517270b-b152-4a51-8c82-f68a84219e07/deploy-status)](https://app.netlify.com/projects/sdanielv/deploys)
 
 This project utilizes **NodeJS**, **React**, **Vite**, **TypeScript**, **TailwindCSS**, and **Netlify** to build a modern, responsive web application with custom themes and interactive UI elements for an engaging user experience.
 
